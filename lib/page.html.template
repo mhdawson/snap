@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!--
+Copyright 2014-2017 the project authors as listed in the AUTHORS file.
+All rights reserved. Use of this source code is governed by the
+license that can be found in the LICENSE file.
+-->
+
+<html>
+  <head>
+    <script src="/socket.io/socket.io.js"></script>
+    <title><DASHBOARD_TITLE></title>
+  </head>
+
+  <body>
+    <script>
+      var socket = new io.connect('<URL_TYPE>://' + window.location.host);
+      socket.on('newpict', function(newUrl) {
+        const pictElement = document.getElementById("latestPicture");
+        pictElement.src = newUrl;
+      });
+
+      var snap = function() {
+        socket.emit('snap');
+      }
+    </script>
+    <table width="100%">
+      <tr><td>
+        <table width="100%" rules="none" border="2px" style="font-size:20px">
+          <tbody>
+            <PICTURE_HTML>
+          </tbody>
+        </table>
+      </td></tr>
+      <tr><td span="100%">
+        <button style="width:100%" align="center" onclick=snap()>Snap</button>
+      </td></tr>
+    <table>
+  </body>
+</html>
