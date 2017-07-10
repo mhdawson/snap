@@ -1,0 +1,39 @@
+{
+  "name": "snap",
+  "version": "0.0.1",
+  "description": "Simple app to capture/display snap through mqtt request",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "node lib/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "micro-app-framework": "^0.1.1",
+    "socket.io": "~1.3.7",
+    "mqtt": "~1.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhdawson/snap.git"
+  },
+  "keywords": [
+    "iot",
+    "mqtt",
+    "dashboard",
+    "micro-app"
+  ],
+  "author": {
+    "name": "Michael Dawson"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhdawson/snap/issues"
+  },
+  "homepage": "https://github.com/mhdawson/snap#readme",
+  "contributors": [
+    {
+      "name": "Michael Dawson",
+      "email": "mdawson@devrus.com"
+    }
+  ]
+}
